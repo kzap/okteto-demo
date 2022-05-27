@@ -1,0 +1,19 @@
+wordpress:
+
+  ## Persistence Parameters
+  ## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
+  ##
+  persistence:
+    ## @param persistence.enabled Enable persistence using Persistent Volume Claims
+    ##
+    enabled: true
+
+    ## @param persistence.size Persistent Volume size
+    ##
+    size: 1Gi
+
+  podSecurityContext:
+    enabled: false
+
+  containerSecurityContext:
+    enabled: false

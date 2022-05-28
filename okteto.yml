@@ -29,6 +29,10 @@ deploy:
 dev:
   okteto-demo-wordpress:
     autocreate: false
+    securityContext:
+      runAsUser: 1001
+      fsGroup: 1001
+    
     image: okteto/php:7
     command: bash
     workdir: /usr/src/app
